@@ -585,7 +585,11 @@ function notifications_subscription_list($name) {
     module_invoke_all('notifications_subscription_list', $name, $list);
     $types[$name] = $list;
   }
+<<<<<<< HEAD
   return $types[$name];
+=======
+  return clone $types[$name];
+>>>>>>> upstream/drupal7_base
 }
 
 /**

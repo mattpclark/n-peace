@@ -123,7 +123,12 @@ class Notifications_Subscription extends Notifications_Entity {
    *   Whether to load all fields in the same operation
    */
   public static function load($sid) {
+<<<<<<< HEAD
     $subscriptions = entity_load('notifications_subscription', array($sid));
+=======
+    $sids = !empty($sid) ? array($sid) : array();
+    $subscriptions = entity_load('notifications_subscription', $sids);
+>>>>>>> upstream/drupal7_base
     return reset($subscriptions);
   }
   /**

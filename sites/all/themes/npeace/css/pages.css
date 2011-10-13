@@ -40,11 +40,9 @@ body {
  * Header
  */
 #header {
-	background-color:#A071AE;
 }
 
 #header .section {
-	padding:20px;
 }
 
 #logo /* Wrapping link for logo */ {
@@ -55,13 +53,6 @@ body {
 
 #logo img {
   vertical-align: bottom;
-}
-
-#main-menu {
-	background-color:#C3B6D4;
-	padding-left:20px;
-	padding-top:1px;
-	padding-bottom:10px;
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
@@ -93,21 +84,6 @@ div#site-name /* The name of the website */ {
   clear: both; /* Clear the logo */
 }
 
-#block-locale-language {
-	margin:0px;
-}
-
-#block-locale-language ul {
-	list-style:none;
-	margin:0px;
-	display:inline;
-}
-
-#block-locale-language ul li {
-	display:inline;
-	margin-right:20px;
-}
-
 /*
  * Main (container for everything else)
  */
@@ -115,6 +91,10 @@ div#site-name /* The name of the website */ {
 }
 
 #main {
+}
+
+#page-left-container {
+	border-right:1px solid #cbcbcb;
 }
 
 /*
@@ -250,10 +230,4 @@ ul.links li {
  * Page bottom
  */
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
-}
-
-/*
- * Panel Styles */
-.pane-border-top {
-	border-top: 1px solid #8D5A9E;
 }

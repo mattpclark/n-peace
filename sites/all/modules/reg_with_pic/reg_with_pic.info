@@ -1,0 +1,11 @@
+name = "Reg With Pic"
+description = "Provides functionality to upload user picture from the registration form."
+core = 7.x
+dependencies[] = file
+
+; Information added by drupal.org packaging script on 2011-10-07
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "reg_with_pic"
+datestamp = "1317990125"
+

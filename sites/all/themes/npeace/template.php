@@ -18,13 +18,13 @@
  *   this, we have to override the theme function. You have to first find the
  *   theme function that generates the output, and then "catch" it and modify it
  *   here. The easiest way to do it is to copy the original function in its
- *   entirety and paste it here, changing the prefix from theme_ to STARTERKIT_.
+ *   entirety and paste it here, changing the prefix from theme_ to npeace_.
  *   For example:
  *
  *     original: theme_breadcrumb()
- *     theme override: STARTERKIT_breadcrumb()
+ *     theme override: npeace_breadcrumb()
  *
- *   where STARTERKIT is the name of your sub-theme. For example, the
+ *   where npeace is the name of your sub-theme. For example, the
  *   zen_classic theme would define a zen_classic_breadcrumb() function.
  *
  *   If you would like to override either of the two theme functions used in Zen
@@ -68,7 +68,7 @@
  *   The name of the template being rendered ("html" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_html(&$variables, $hook) {
+function npeace_preprocess_html(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To
@@ -86,7 +86,7 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_page(&$variables, $hook) {
+function npeace_preprocess_page(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -100,11 +100,11 @@ function STARTERKIT_preprocess_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_node(&$variables, $hook) {
+function npeace_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // Optionally, run node-type-specific preprocess functions, like
-  // STARTERKIT_preprocess_node_page() or STARTERKIT_preprocess_node_story().
+  // npeace_preprocess_node_page() or npeace_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {
     $function($variables, $hook);
@@ -121,7 +121,7 @@ function STARTERKIT_preprocess_node(&$variables, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_comment(&$variables, $hook) {
+function npeace_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -135,221 +135,8 @@ function STARTERKIT_preprocess_comment(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_block(&$variables, $hook) {
+function npeace_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
   $variables['classes_array'][] = 'count-' . $variables['block_id'];
 }
-
-/**
-* Replacement for theme_form_element() to enable descriptions to come BEFORE the field to be filled out.
-*/
-function npeace_form_element($variables) {
-	$element = $variables['element'];
-  	$value = $variables['element']['#children'];
-
-  $wrapper_classes = array(
-    'form-item',
-  );
-  
-  $output = '';
-  
-  switch ($element['#type']) {
-	  
-	  case 'textarea':
-	  
-	  	$output = '<div class="' . implode(' ', $wrapper_classes) . '" id="' . $element['#id'] . '-wrapper">' . "\n";
-  		$required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-	  
-		if (!empty($element['#title'])) {
-    		$title = $element['#title'];
-   			$output .= ' <label for="' . $element['#id'] . '">' . t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) . "</label>\n";
- 		 }
-
-  		if (!empty($element['#description'])) {
-    		$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  		}
-
-  		$output .= '<div id="' . $element['#id'] . '">' . $value . '</div>' . "\n";
-
-  		$output .= "</div>\n";
-		
-		break;
-	
-	  case 'textfield':
-	  
-	  	$output = '<div class="' . implode(' ', $wrapper_classes) . '" id="' . $element['#id'] . '-wrapper">' . "\n";
-  		$required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-	
-		if (!empty($element['#title'])) {
-    		$title = $element['#title'];
-   			$output .= ' <label for="' . $element['#id'] . '">' . t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) . "</label>\n";
- 		 }
-
-  		if (!empty($element['#description'])) {
-    		$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  		}
-
-  		$output .= $element['#children'];
-
-  		$output .= "</div>\n";
-		
-		break;
-		
- 	   case 'select':
-	   
-		$output = '<div class="' . implode(' ', $wrapper_classes) . '" id="' . $element['#id'] . '-wrapper">' . "\n";
-  		$required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-	
-		if (!empty($element['#title'])) {
-    		$title = $element['#title'];
-   			$output .= ' <label for="' . $element['#id'] . '">' . t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) . "</label>\n";
- 		 }
-
-  		if (!empty($element['#description'])) {
-    		$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  		}
-
-  		$output .= '<div id="' . $element['#id'] . '">' . $value . '</div>' . "\n";
-
-  		$output .= "</div>\n";
-		
-		break;
-
-  		case 'radios':
-		
-		$output = '<div class="' . implode(' ', $wrapper_classes) . '" id="' . $element['#id'] . '-wrapper">' . "\n";
-  		$required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-	
-		if (!empty($element['#title'])) {
-    		$title = $element['#title'];
-   			$output .= ' <label for="' . $element['#id'] . '">' . t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) . "</label>\n";
- 		 }
-
-  		if (!empty($element['#description'])) {
-    		$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  		}
-
-  		$output .= '<div id="' . $element['#id'] . '">' . $value . '</div>' . "\n";
-
-  		$output .= "</div>\n";
-		
-		break;
-		
-		case 'radio':
-		
-		$output .= '<div class="form-item form-type-'.$element['#type'].' '.$element['#id'].'">';
-		$output .= '<input id="'.$element['#id'].'" class="'.'form-'.$element['#type'].'" type="'.$element['#type'].'" value="'.$element['#return_value'].'" name="'.$element['#name'].'">';
-		$output .= '<label class="option" for="'.$element['#id'].'">'.$element['#title'].'</label>';
-		$output .= '</div>';
-
-		
-		break;
-		
-  		case 'checkboxes':
-		
-		$output = '<div class="' . implode(' ', $wrapper_classes) . '" id="' . $element['#id'] . '-wrapper">' . "\n";
-  		$required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-	
-		if (!empty($element['#title'])) {
-    		$title = $element['#title'];
-   			$output .= ' <label for="' . $element['#id'] . '">' . t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) . "</label>\n";
- 		 }
-
-  		if (!empty($element['#description'])) {
-    		$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  		}
-
-  		$output .= '<div id="' . $element['#id'] . '">' . $value . '</div>' . "\n";
-
-  		$output .= "</div>\n";
-		
-		break;
-		
-		case 'checkbox':
-		
-		$output .= '<div class="form-item form-type-'.$element['#type'].' '.$element['#id'].'">';
-		$output .= '<input id="'.$element['#id'].'" class="'.'form-'.$element['#type'].'" type="'.$element['#type'].'" value="'.$element['#return_value'].'" name="'.$element['#name'].'">';
-		$output .= '<label class="option" for="'.$element['#id'].'">'.$element['#title'].'</label>';
-		$output .= '</div>';
-
-		
-		break;
-		
-		case 'date_popup':
-		
-		$output .= '<div class="form-item form-type-date-popup'.$element['#id'].'">';
-		$output .= '<label for="'.$element['#id'].'">'.$element['#title'].'</label>';
-		$output .= '<div class="form-item form-type-textfield '.$element['#id'].'">';
-		$output .= $element['#children'];
-		$output .= '</div>';
-		
-		break;
-		
-		case 'file':
-		
-		$output .= '<div class="form-item form-type-date-popup'.$element['#id'].'">';
-		$output .= '<label for="'.$element['#id'].'">'.$element['#title'].'</label>';
-		$output .= '<div class="form-item form-type-textfield '.$element['#id'].'">';
-		$output .= $element['#children'];
-		$output .= '</div>';
-		
-		break;
-		
-		case 'managed_file':
-		
-		$output .= '<div class="form-item form-type-date-popup'.$element['#id'].'">';
-		$output .= '<label for="'.$element['#id'].'">'.$element['#title'].'</label>';
-		$output .= '<div class="form-item form-type-textfield '.$element['#id'].'">';
-		$output .= '<p>'.$element['#description'].'</p>';
-		$output .= $element['#children'];
-		$output .= '</div>';
-		
-		break;
-		
-		case 'password':
-		
-		 $output = '<div class="' . implode(' ', $wrapper_classes) . '" id="' . $element['#id'] . '-wrapper">' . "\n";
-  		$required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-	
-		if (!empty($element['#title'])) {
-    		$title = $element['#title'];
-   			$output .= ' <label for="' . $element['#id'] . '">' . t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) . "</label>\n";
- 		 }
-
-  		if (!empty($element['#description'])) {
-    		$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  		}
-
-  		$output .= $element['#children'];
-
-  		$output .= "</div>\n";
-		
-		break;
-		
-		case 'date_select':
-		
-		 $output = '<div class="' . implode(' ', $wrapper_classes) . '" id="' . $element['#id'] . '-wrapper">' . "\n";
-  		$required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-	
-		if (!empty($element['#title'])) {
-    		$title = $element['#title'];
-   			$output .= ' <label for="' . $element['#id'] . '">' . t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) . "</label>\n";
- 		 }
-
-  		if (!empty($element['#description'])) {
-    		$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  		}
-
-  		$output .= $element['#children'];
-
-  		$output .= "</div>\n";
-		
-		break;
-		
-		
-	
-		 
-  }
-
-  		return $output;
-}
+// */

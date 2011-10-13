@@ -11,31 +11,25 @@
 
 
 body {
-	background-color:#fff;
 }
 
-#page-wrapper {	
+#page-wrapper {
 }
 
 #page {
-	background-color:#E5E1EE;
 }
 
 #header {
-	
 }
 
 #header .section {
 }
 
 #main-wrapper {
-	
 }
 
 #main {
 }
 
 .region-footer {
-	background-image:url('/sites/all/themes/npeace/images/footer-background.png');
-	background-repeat:no-repeat;
 }

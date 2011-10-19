@@ -110,7 +110,7 @@ fieldset {
 
    */
 
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: Helvetica, Verdana, Tahoma, "DejaVu Sans", sans-serif;
 }
 
 pre,
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl,
 hr, table, fieldset {
-  margin: 1.5em 0;
+  /* margin: 1.5em 0; */
 }
 
 /* Headings */
@@ -152,6 +152,9 @@ h1 {
 h2 {
   font-size: 1.5em;
   margin: 1em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.5 = 1em */
+  font-weight:100;
+  color:#8071B4;
+  margin-bottom:15px;
 }
 
 h3 {
@@ -331,6 +334,8 @@ button {
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
 a:link {
+	color:#8071B4;
+	text-decoration:none;
 }
 
 a:visited {
@@ -341,6 +346,7 @@ a:focus {
 }
 
 a:active {
+	color: #F6921E;
 }
 
 /*

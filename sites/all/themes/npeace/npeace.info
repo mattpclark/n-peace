@@ -12,7 +12,7 @@
 ; page at admin/appearance.
 
 screenshot  = screenshot.png
-name        = N-Peace Network Theme
+name        = npeace	
 description = Theme for the N-Peace Network website designed by Peter Siris.
 
 
@@ -39,7 +39,7 @@ stylesheets[all][]        = css/layout-fixed.css
 stylesheets[all][]        = css/page-backgrounds.css
 stylesheets[all][]        = css/tabs.css
 stylesheets[all][]        = css/pages.css
-stylesheets[all][]        = css/page--front.css
+stylesheets[all][]		  = css/page--front.css
 stylesheets[all][]        = css/blocks.css
 stylesheets[all][]        = css/navigation.css
 stylesheets[all][]        = css/views-styles.css
@@ -47,6 +47,7 @@ stylesheets[all][]        = css/nodes.css
 stylesheets[all][]        = css/comments.css
 stylesheets[all][]        = css/forms.css
 stylesheets[all][]        = css/fields.css
+stylesheets[all][]		  = css/custom.css
 stylesheets[print][]      = css/print.css
 
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
@@ -80,17 +81,19 @@ stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 ; add a line line to this file, and then add the new $page['REGION'] variable
 ; to your page.tpl.php template.
 
-regions[sidebar_right] =  Right Sidebar
+regions[help]           = Help
+regions[sidebar_right] = Right Sidebar
 regions[navigation]     = Navigation bar
-regions[highlight1]    	= Highlight 1
-regions[highlight2]		= Highlight 2
-regions[highlight3]		= Highlight 3
-regions[map]			= Map
+regions[highlight1]    	= Highlight1
+regions[highlight2]    	= Highlight2
+regions[highlight3]    	= Highlight3
 regions[content]        = Content
 regions[header]         = Header
 regions[footer]         = Footer
+regions[bottom]         = Page bottom
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
 regions[supporters]		= Supporters
-regions[development]	= Development Tools
 
 
 
@@ -103,6 +106,7 @@ regions[development]	= Development Tools
 
 features[] = logo
 features[] = name
+features[] = slogan
 features[] = node_user_picture
 features[] = comment_user_picture
 features[] = favicon

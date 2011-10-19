@@ -3,49 +3,9 @@
  * Form Styling
  */
 
-/**
- * Global form styles
- */
 
 .form-item /* Wrapper for a form element (or group of form elements) and its label */ {
   margin: 1.5em 0;
-}
-
-.form-item input.form-text {
-	font-size:16pt;
-	height:30px;
-	background-color:#B6A6CB;
-	border:1px solid #8D5A9E;
-}
-
-.form-item input.form-file {
-	font-size:16pt;
-	height:30px;
-	background-color:#B6A6CB;
-	margin-right:20px;
-}
-
-.form-item input.form-submit {
-	font-size:16pt;
-	height:30px;
-	border:1px solid #8D5A9E;
-	
-}
-
-.form-item select.form-select {
-	background-color:#B6A6CB;
-	border:1px solid #8D5A9E;
-	height:32px;
-	font-size:16pt;
-}
-
-.form-item textarea.form-textarea {
-	background-color:#B6A6CB;
-	border:1px solid #8D5A9E;
-}
-
-.form-textarea-wrapper {
-	width:720px;
 }
 
 .form-item input.error,
@@ -57,7 +17,6 @@
 .form-item label /* The label for a form element */ {
   display: block;
   font-weight: bold;
-  color:#8D5A9E;
 }
 
 .form-item label.option /* The label for a radio button or checkbox */ {
@@ -89,18 +48,6 @@
 .tips /* Tips for Drupal's input formats */ {
 }
 
-.fieldset {
-	border:#EF6D33 1px solid;
-}
-
-fieldset {
-	border:#EF6D33 1px solid;
-}
-
-.fieldset-legend {
-	font-weight:bold;
-	color:#EF6D33;
-}
 
 /*
  * Password confirmation
@@ -177,84 +124,30 @@ form table .item-list ul {
   margin: 0;
 }
 
-/**
- * Custom Form Styles
- * Use the Form ID to indentify the form in comments
- */
-
-/**
- * nomination-node-form
- *
- */
-
-#nomination-node-form .float-form-element-left.title {
-	width:100px;
+/* Custom Form Elements */
+#block-search-form .form-item-search-block-form {
 	float:left;
-	margin-right:20px;
+	margin:0 5px 0 0;
+	width:126px;
 }
 
-#nomination-node-form .float-form-element-left.title select {
-	width:100px;
+#block-search-form .form-text {
+	border:1px #8071B4 solid;
+	color:#C1ACCF;
+	width:116px;
+	height:20px;
+	padding-left:10px;
 }
 
-#nomination-node-form .float-form-element-left.firstname {
-	width:280px;
-	float:left;
-	margin-right:20px;
-}
-
-#nomination-node-form .float-form-element-left.firstname input {
-	width:280px;
-}
-
-#nomination-node-form .float-form-element-left.surname {
-	width:280px;
-	float:left;
-	margin-right:0px;
-}
-
-#nomination-node-form .float-form-element-left.surname input {
-	width:280px;
-}
-
-#nomination-node-form .float-form-element-left.country {
-	width:200px;
-	float:left;
-	margin-right:20px;
-}
-
-#nomination-node-form .float-form-element-left.country select {
-	width:200px;
-}
-
-#nomination-node-form .float-form-element-left.email {
-	width:250px;
-	float:left;
-	margin-right:20px;
-}
-
-#nomination-node-form .float-form-element-left.email input {
-	width:250px;
-}
-
-#nomination-node-form .float-form-element-left.telephone {
-	width:210px;
-	float:left;
-	margin-right:0px;
-}
-
-#nomination-node-form .float-form-element-left.telephone input {
-	width:210px;
-}
-
-#nomination-node-form .form-radios {
-	border:1px solid #EF6D33;
-	padding:5px;
-	height:60px;
-	font-size:16pt;
-}
-
-#nomination-node-form .form-type-radio {
-	width:200px;
+#block-search-form .form-submit {
+    background-image: url('/sites/all/themes/npeace/images/buttons/go.png');
+	background-repeat:no-repeat;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 0;
+    text-indent: -9999px;
+    width: 25px;
 	float:left;
 }

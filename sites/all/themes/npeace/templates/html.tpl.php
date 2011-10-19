@@ -61,19 +61,53 @@
  */
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
   "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <script src="http://code.jquery.com/jquery-1.6.2.js"></script>
-  <meta property="og:type" content="cause"/>
-  <meta property="og:title" content="N-Peace Awards"/>
-  <meta property="og:description" content="I voted for an N-Peace award candidate. You can vote and help recognize the leadership of women in building peace."/>
-  <meta property="og:image" content="http://www.n-peace.net/sites/all/themes/npeace/images/n-logo.png"/>
-  <meta property="fb:admins" content="100002628343071" />
+  <script>
+	(function ($) {
+		$('document').ready(function() {
+			var $expanded = false;
+			$('#block-menu-menu-engage').click(function() {
+				if ($expanded == false) {
+					$('#block-menu-menu-engage .content').slideDown ('slow', function() {
+						$('#block-menu-menu-engage h2').css("background-image", "url('/sites/all/themes/npeace/images/arrow_up.png')");
+						$('#block-menu-menu-engage h2').css("background-repeat", "no-repeat");
+						$('#block-menu-menu-engage h2').css("background-position", "right");
+						$expanded = true;
+					});
+				} else {
+					$('#block-menu-menu-engage .content').slideUp ('slow', function() {
+						$('#block-menu-menu-engage h2').css("background-image", "url('/sites/all/themes/npeace/images/arrow_down.png')");
+						$('#block-menu-menu-engage h2').css("background-repeat", "no-repeat");
+						$('#block-menu-menu-engage h2').css("background-position", "right");
+						$expanded = false;
+					});
+				}
+			});
+		});
+	}(jQuery));
+	</script>
+	<script>
+	(function ($) {
+		$('document').ready(function() {
+			$('#edit-search-block-form--2').val('Search');
+			$('#edit-search-block-form--2').focus(function() {
+				$('#edit-search-block-form--2').val('');
+				$('#edit-search-block-form--2').css('color','#000000');
+			})
+			$('#edit-search-block-form--2').blur(function() {
+				if ($('#edit-search-block-form--2').val == ' ') {
+					$('#edit-search-block-form--2').val('Search');
+				}	
+			})
+		})
+	}(jQuery));
+	</script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">

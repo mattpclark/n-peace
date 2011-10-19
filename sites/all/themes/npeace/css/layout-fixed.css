@@ -35,25 +35,13 @@ body {
 }
 
 #page {
-}
-
-#page-left-container {
-	float:left;
-	width:742px;
-	padding-right:25px;
-	padding-left:50px;
-}
-
-#page-right-container {
-	float:left;
-	width:206px;
+	padding:25px;
 }
 
 /*
  * Header
  */
 #header {
-	width:742px;
 }
 
 #header .section {
@@ -75,42 +63,46 @@ body {
 /*
  * Content
  */
-#content,
+/* #content,
 .no-sidebars #content {
   float: left; /* LTR */
-  width: 818px;
-  margin-left: 0px; /* LTR */
-  margin-right: -818px; /* LTR */ /* Negative value of #content's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+  /* width: 960px;
+  margin-left: 0; /* LTR */
+  /* margin-right: -960px; /* LTR */ /* Negative value of #content's width + left margin. */
+  /* padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+/* } */
+
+#content {
+
 }
 
-.region-sidebar-right #content {
-  width: 818px;
-  margin-left: 50; /* LTR */
-  margin-right: -868px; /* LTR */ /* Negative value of #content's width + left margin. */
+.sidebar-first #content {
+  width: 760px;
+  margin-left: 200px; /* LTR */ /* The width of .region-sidebar-first. */
+  margin-right: -960px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
-.region-sidebar-right {
-	width:206px;
-	margin-left: 0;
-	margin-right:0;
-	float:right;
+.sidebar-second #content {
+  width: 760px;
+  margin-left: 0; /* LTR */
+  margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
-.region-sidebar-right .content {
-	padding-left:50px;
+.two-sidebars #content {
+  width: 560px;
+  margin-left: 200px; /* LTR */ /* The width of .region-sidebar-first */
+  margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
 #content .section {
   margin: 0;
-  padding: 50px;
+  padding: 0;
 }
 
 /*
  * Navigation
  */
 #navigation {
-  float: left; /* LTR */
   width: 100%;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
@@ -200,3 +192,7 @@ body {
   overflow-y: hidden;
 }
 */
+
+#footer {
+	margin:20px 0 20px 0;
+}

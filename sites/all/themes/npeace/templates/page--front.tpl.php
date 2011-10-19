@@ -68,63 +68,50 @@
  * @see template_process()
  */
 ?>
-<?php dsm($page); ?>
-
 <div id="page-wrapper">
-	<div id="page-front">
-		<div id="page-left-container">
-			<div id="header"><div class="section clearfix">
-				<?php if ($logo): ?>
-		      		<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-		    	<?php endif; ?>
+<div id="page">
+	<div id="left-hand-side">
+		<div id="header">
+		<div class="section clearfix">
+		<?php if ($logo): ?>
+	      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+	    <?php endif; ?>
+	    </div> <!-- /.section -->
+		</div> <!-- /.header -->
+		<div id="content">
+		<?php if ($page['navigation'] || $main_menu): ?>
+	      <div id="navigation">
 
-		    	<?php if ($site_name || $site_slogan): ?>
-		      		<div id="name-and-slogan">
-		        <?php if ($site_name): ?>
-		          <?php if ($title): ?>
-		            <div id="site-name"><strong>
-		              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-		            </strong></div>
-		          <?php else: /* Use h1 when the content title is empty */ ?>
-		            <h1 id="site-name">
-		              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-		            </h1>
-		          <?php endif; ?>
-		        <?php endif; ?>
+	        <?php print theme('links__system_main_menu', array(
+	          'links' => $main_menu,
+	          'attributes' => array(
+	            'id' => 'main-menu',
+	            'class' => array('links', 'inline', 'clearfix'),
+	          ),
+	        )); ?>
 
-		        <?php if ($site_slogan): ?>
-		          <div id="site-slogan"><?php print $site_slogan; ?></div>
-		        <?php endif; ?>
-		      </div><!-- /#name-and-slogan -->
-		    <?php endif; ?>
+	        <?php print render($page['navigation']); ?>
 
-		    <?php print theme('links__system_secondary_menu', array(
-		      'links' => $secondary_menu,
-		      'attributes' => array(
-		        'id' => 'secondary-menu',
-		        'class' => array('links', 'inline', 'clearfix'),
-		      ),
-		      'heading' => array(
-		        'text' => $secondary_menu_heading,
-		        'level' => 'h2',
-		        'class' => array('element-invisible'),
-		      ),
-		    )); ?>
-
-		    <?php print render($page['header']); ?>
-			</div></div><!-- /.section, /#header -->
-			<div id="home-page-splash"><img src="/sites/all/themes/npeace/images/home-page-splash.png" /></div>
-			<div id="home-page-content">
-			<div id="home-page-map-space"></div>
-			<div id="home-page-highlight-1"><?php print render($page['content']); ?></div>
-			<div id="home-page-highlight-2"><?php print render($page['content']); ?></div>
-			<div id="home-page-highlight-3"><?php print render($page['content']); ?></div>
-			</div> <!-- /.home-page-content -->
-		</div> <!-- /.page-left-container -->
-		<div id="page-right-container">
-			<?php print render($page['sidebar_right']); ?>
-		</div> <!-- /.page-right-container -->
-		<div id="footer"></div> <!-- /.footer -->
-		<div id="supporters"></div> <!-- /.supporters -->
-	</div>
-</div>
+	      </div><!-- /#navigation -->
+	    <?php endif; ?>
+			<div id="front-page-splash">
+				<img src="/sites/all/themes/npeace/images/home-page-splash.png" alt="The N-Peace Network" />
+			</div> <!-- /.front-page-splash -->
+			<div id="quote">
+			<p>For it isn't enough to talk about peace. One must believe in it. And it isn't enough to believe in it. One must work at it.</p>
+			<p><em>~ Eleanor Roosevelt</em></p>
+			</div>
+			<div id="highlight1"><?php print render($page['highlight1']); ?></div> <!-- /.highlight1 -->
+			<div class="clearfix"></div>
+			<div id="highlight2"><?php print render($page['highlight2']); ?></div> <!-- /.highlight2 -->
+			<div id="highlight3"><?php print render($page['highlight3']); ?></div> <!-- /.highlight3 -->
+		</div> <!-- /.content -->
+	</div> <!-- /.left-hand-side -->
+	<div id="right-hand-side">
+		<?php print render($page['sidebar_right']); ?>
+	</div> <!-- /.right-hand-side -->
+	<div class="clearfix"></div>
+	<div id="footer"><?php print render($page['footer']); ?></div> <!-- /.footer -->
+	<div id="supporters"></div <!-- /.supporters -->
+</div> <!-- /.page -->
+</div> <!-- /.page-wrapper -->

@@ -20,6 +20,7 @@ body {
 }
 
 #page {
+
 }
 
 /*
@@ -42,11 +43,8 @@ body {
 #header {
 }
 
-#header .section {
-}
-
 #logo /* Wrapping link for logo */ {
-  float: left; /* LTR */
+  /* float: left; /* LTR */
   margin: 0;
   padding: 0;
 }
@@ -93,20 +91,26 @@ div#site-name /* The name of the website */ {
 #main {
 }
 
-#page-left-container {
-	border-right:1px solid #cbcbcb;
-}
-
 /*
  * Content
  */
+#content-area {
+	background-image:url('/sites/all/themes/npeace/images/background/asia-map.jpg');
+	background-repeat:no-repeat;
+	margin-top:50px;
+}
 #content {
 }
 
 #content .section {
+	
 }
 
 .region-highlighted {
+}
+
+.region-highlight2 {
+	border-right:1px solid #CBCBCB;
 }
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
@@ -115,11 +119,24 @@ div#site-name /* The name of the website */ {
 
 h1.title, /* The title of the page */
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
-h2.block-title, /* Block title */
+/* h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title /* Comment title */ {
   margin: 0;
+  color:#8071B4;
+  font-weight:100;
+}
+
+#right-hand-side h1 {
+	color:#8071B4;
+	font-size:14pt;
+	font-weight:100;
+	line-height:1.2em;
+}
+
+p {
+	font-size:10pt;
 }
 
 tr.even /* Some tables have rows marked even or odd. */ {
@@ -172,10 +189,11 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 ul.links /* List of links */ {
+	
 }
 
 ul.links.inline {
-  display: block; /* Let the links be inline, but the container be a block. */
+  /* display: block; /* Let the links be inline, but the container be a block. */
 }
 
 ul.links li {
@@ -194,6 +212,11 @@ ul.links li {
 }
 
 .more-link /* Aggregator, blog, and forum more link */ {
+	
+}
+
+.more-link a {
+	color:#FAAF3B;
 }
 
 /*

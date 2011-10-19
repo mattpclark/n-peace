@@ -67,3 +67,40 @@ h2.node-title /* Node title */ {
 
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 }
+
+#node-content-left {
+	width:370px;
+	float:left;
+}
+
+#node-content-left .photo-container {
+	margin-left:50px;
+}
+
+#node-content-right {
+	width:356px;
+	float:left;
+	padding-left:30px;
+}
+
+#node-content-right h1 {
+	font-weight:100;
+	color:#8071B4;
+	font-size:24pt;
+	border-bottom:1px solid #808080;
+	line-height:1em;
+}
+
+.node-highlight {
+	padding-left:80px;
+	font-size:16pt;
+	color:#989898;
+	background-image:url('/sites/all/themes/npeace/images/flower.png');
+	background-repeat:no-repeat;
+	text-align:left;
+}
+
+#node-content-right .field-item {
+	height:300px;
+	overflow:scroll;
+}

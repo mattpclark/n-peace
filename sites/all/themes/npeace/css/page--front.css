@@ -1,260 +1,79 @@
-/**
- * @file
- * Page Styling
- *
- * Style the markup found in page.tpl.php. Also includes some styling of
- * miscellaneous Drupal elements that appear in the $content variable, such as
- * ul.links, .pager, .more-link, etc.
- */
+body {}
 
-
-/*
- * Body
- */
-body {
-  margin: 0;
-  padding: 0;
+div {
 }
 
-#page-wrapper {
-	
+#page-wrapper-front,
+.region-bottom {
+  /*
+   * If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. See also the ie6.css file
+   * for the necessary IE5/IE6quirks hack to center a div.
+   */
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
 }
 
-#page-front {
-}
-
-/*
- * The skip-link link will be completely hidden until a user tabs to the link.
- * See the element-focusable rule in system.base.css.
- */
-#skip-link a,
-#skip-link a:visited {
-  display: block;
-  width: 100%;
-  padding: 2px 0 3px 0;
-  text-align: center;
-  background-color: #666;
-  color: #fff;
-}
-
-/*
- * Header
- */
-#header {
-}
-
-#header .section {
-}
-
-#logo /* Wrapping link for logo */ {
-  float: left; /* LTR */
-  margin: 0;
-  padding: 0;
-}
-
-#logo img {
-  vertical-align: bottom;
-}
-
-#name-and-slogan /* Wrapper for website name and slogan */ {
-  float: left;
-}
-
-h1#site-name,
-div#site-name /* The name of the website */ {
-  margin: 0;
-  font-size: 2em;
-  line-height: 1.5em;
-}
-
-#site-name a:link,
-#site-name a:visited {
-  color: #000;
-  text-decoration: none;
-}
-
-#site-name a:hover,
-#site-name a:focus {
-  text-decoration: underline;
-}
-
-#site-slogan /* The slogan (or tagline) of a website */ {
-}
-
-.region-header /* Wrapper for any blocks placed in the header region */ {
-  clear: both; /* Clear the logo */
-}
-
-/*
- * Main (container for everything else)
- */
-#main-wrapper {
-}
-
-#main {
-}
-
-#page-front #page-left-container {
+body.front #page {
+	padding:25px;
 	background-image:url('/sites/all/themes/npeace/images/background/world-map.jpg');
 	background-repeat:no-repeat;
 }
 
-#page-front #home-page-content {
-	margin-top:30px;
+#left-hand-side {
+	width:766px;
+	padding-right:22px;
+	float:left;
+	border-right:1px solid #cbcbcb;
 }
 
-#page-front #page-left-container #home-page-map-space {
-	width:371px;
+body.front #header {
+}
+
+body.front #content {
+	
+}
+
+body.front #content #highlight1 {
+	width:370px;
+	padding-left:396px;
+}
+
+body.front #content #highlight2 {
+	width:370px;
+	float:left;
+	padding-right:13px;
+}
+
+body.front #content #highlight3 {
+	width:370px;
+	float:left;
+	padding-left:13px;
+}
+
+#right-hand-side {
+	width:158px;
+	padding-left:22px;
+	float:left;
+}
+
+#footer {
 	height:100px;
-	float:left;
 }
 
-#page-front #page-left-container #home-page-highlight-1 {
-	width:395px;
-	float:left;
+#supporters {
+	background-image:url('/sites/all/themes/npeace/images/background/supporters.png');
+	height:136px;
 }
 
-#page-front #page-left-container #home-page-highlight-2 {
-	width:371px;
-	float:left;
+#quote {
+	position:absolute;
+	top:550px;
+	width:300px;
 }
 
-#page-front #page-left-container #home-page-highlight-3 {
-	width:395px;
-	float:left;
-}
-
-/*
- * Content
- */
-#content {
-}
-
-#content .section {
-}
-
-.region-highlighted {
-}
-
-.breadcrumb /* The path to the current page in the form of a list of links */ {
-  padding-bottom: 0; /* Undo system.css */
-}
-
-h1.title, /* The title of the page */
-h2.node-title, /* Title of a piece of content when it is given in a list of content */
-h2.block-title, /* Block title */
-h2.title, /* Comment section heading */
-h2.comment-form, /* Comment form heading */
-h3.title /* Comment title */ {
-  margin: 0;
-}
-
-tr.even /* Some tables have rows marked even or odd. */ {
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
-}
-
-tr.odd {
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
-}
-
-div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
-  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
-}
-
-div.messages ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-div.status /* Normal priority messages */ {
-}
-
-div.warning,
-tr.warning /* Medium priority messages */ {
-  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
-}
-
-div.error,
-tr.error /* High priority messages. See also the .error declaration below. */ {
-}
-
-.error /* Errors that are separate from div.messages status messages. */ {
-  /* color: #e55; */ /* Drupal core uses a #e55 background */
-}
-
-.warning /* Warnings that are separate from div.messages status messages. */ {
-  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
-}
-
-div.tabs /* See also the tabs.css file. */ {
-}
-
-.region-help /* Help text on a page */ {
-}
-
-.more-help-link /* Link to more help */ {
-}
-
-.region-content /* Wrapper for the actual page content */ {
-}
-
-ul.links /* List of links */ {
-}
-
-ul.links.inline {
-  display: block; /* Let the links be inline, but the container be a block. */
-}
-
-ul.links li {
-  padding: 0 1em 0 0; /* LTR */
-}
-
-.item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
-  padding: 0;
-}
-
-.item-list .pager li /* Each page number in the pager list */ {
-  padding: 0 0.5em;
-}
-
-.feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
-}
-
-.more-link /* Aggregator, blog, and forum more link */ {
-}
-
-/*
- * First sidebar (on left in LTR languages, on right in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-first
- * (see the layout.css file.)
- */
-.region-sidebar-first {
-}
-
-.region-sidebar-first .section {
-}
-
-/*
- * Second sidebar (on right in LTR languages, on left in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-second
- * (see the layout.css file.)
- */
-.region-sidebar-second {
-}
-
-.region-sidebar-second .section {
-}
-
-/*
- * Footer
- */
-.region-footer {
-}
-
-/*
- * Page bottom
- */
-.region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
+#quote p {
+	font-size:18pt;
+	color:#cbcbcb;
 }

@@ -69,108 +69,49 @@
  */
 ?>
 <div id="page-wrapper">
-	<?php if ($page['language_selector']): ?>
-		<div id="language-selector"><?php print render($page['language_selector']); ?></div>
-		
-	<?php endif; ?>
 <div id="page">
-  <div id="header"><div class="section clearfix">
+	<div id="left-hand-side">
+		<div id="header">
+		<div class="section clearfix">
+		<?php if ($logo): ?>
+	      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+	    <?php endif; ?>
+	    </div> <!-- /.section -->
+	    <?php print $messages; ?>
+		</div> <!-- /.header -->
+		<div id="navigation">
 
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-    <?php endif; ?>
-
-    <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <div id="site-name"><strong>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </strong></div>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <div id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div><!-- /#name-and-slogan -->
-    <?php endif; ?>
-
-    <?php print theme('links__system_secondary_menu', array(
-      'links' => $secondary_menu,
-      'attributes' => array(
-        'id' => 'secondary-menu',
-        'class' => array('links', 'inline', 'clearfix'),
-      ),
-      'heading' => array(
-        'text' => $secondary_menu_heading,
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      ),
-    )); ?>
-
-    <?php print render($page['header']); ?>
-  </div></div><!-- /.section, /#header -->
- <?php if ($page['main_menu']): ?>
-      <div id="main-menu">
-        <?php print render($page['main_menu']); ?>
-		<div class="clearfix"></div>
-     </div><!-- /#main-menu -->
- <?php endif; ?>
-
-  <?php if ($page['above_the_fold']): ?>
-	<div id="above-the-fold">
-		<?php print render($page['above_the_fold']); ?>
-	</div>
-  <?php endif; ?>
-
-  <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
-
-    <div id="content" class="column"><div class="section">
-      <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php if ($tabs = render($tabs)): ?>
-        <div class="tabs"><?php print $tabs; ?></div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-    </div></div><!-- /.section, /#content -->
-
-   
-
-    <?php print render($page['sidebar_first']); ?>
-
-    <?php print render($page['sidebar_second']); ?>
-
-  </div></div><!-- /#main, /#main-wrapper -->
-
-  <div class="region-footer">
-  <img name="footer" src="/sites/all/themes/npeace/images/footer/footer.gif" width="800" height="200" border="0" id="footer" usemap="#m_footer" alt="" /><map name="m_footer" id="m_footer">
-<area shape="rect" coords="29,131,216,173" href="http://www.huntalternatives.org/pages/20_about_inclusive_security.cfm" target="_blank" title="The Institute for Inclusive Security" alt="The Institute for Inclusive Security" />
-<area shape="rect" coords="248,129,344,176" href="http://www.sfcg.org/" target="_blank" title="Search for Common Ground" alt="Search for Common Ground" />
-<area shape="rect" coords="453,128,629,176" href="http://www.ausaid.gov.au/" target="_blank" title="The Australian Government Aid Program" alt="The Australian Government Aid Program" />
-<area shape="rect" coords="721,14,771,114" href="http://regionalcentrebangkok.undp.or.th/" target="_blank" title="UNDP Asia-Pacific Regional Centre" alt="UNDP Asia-Pacific Regional Centre" />
-</map></div>
-
-</div></div><!-- /#page, /#page-wrapper -->
-
-<?php print render($page['bottom']); ?>
-
-<?php if ($page['devel']): ?>
-<div id="devel"><?php print render($page['devel']); ?></div>
-<?php endif; ?>
+	        <?php print theme('links__system_main_menu', array(
+	          'links' => $main_menu,
+	          'attributes' => array(
+	            'id' => 'main-menu',
+	            'class' => array('links', 'inline', 'clearfix'),
+	          ),
+	        )); ?>
+			<?php if ($page['navigation'] || $main_menu): ?>
+				<?php print render($page['navigation']); ?>
+		    <?php endif; ?>
+	      </div><!-- /#navigation -->
+		<div id="content-area">
+			<?php if ($tabs = render($tabs)): ?>
+		        <div class="tabs"><?php print $tabs; ?></div>
+		      <?php endif; ?>
+		<?php print render($page['content']); ?>
+		</div> <!-- /.content-area -->
+	</div> <!-- /.left-hand-side -->
+	<div id="right-hand-side">
+		<?php print render($page['sidebar_right']); ?>
+	</div> <!-- /.right-hand-side -->
+	<div class="clearfix"></div>
+	<div id="footer"><?php print render($page['footer']); ?></div> <!-- /.footer -->
+	<div class="clearfix"></div>
+	<div id="supporters">
+	<img name="supporters" src="/sites/all/themes/npeace/images/background/supporters.png" width="1024" height="136" border="0" id="supporters" usemap="#m_supporters" alt="" /><map name="m_supporters" id="m_supporters">
+	<area shape="rect" coords="656,68,763,119" href="http://www.sfcg.org/" target="_blank" title="The Search for Common Ground" alt="The Search for Common Ground" />
+	<area shape="rect" coords="462,77,626,119" href="http://www.huntalternatives.org/pages/20_about_inclusive_security.cfm" target="_blank" title="The Institute for Inclusive Security" alt="The Institute for Inclusive Security" />
+	<area shape="rect" coords="315,77,428,136" href="http://www.ausaid.gov.au" target="_blank" title="Australian Aid" alt="Australian Aid" />
+	<area shape="rect" coords="0,15,282,119" href="http://www.undp.org" target="_blank" title="United Nations Development Programme" alt="United Nations Development Programme" />
+	</map>
+	</div <!-- /.supporters -->
+</div> <!-- /.page -->
+</div> <!-- /.page-wrapper -->

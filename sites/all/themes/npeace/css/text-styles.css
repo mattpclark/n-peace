@@ -1,0 +1,58 @@
+/* Global Styles */
+body {
+	font-family:"myriad pro", arial, serif;
+}
+
+/* Heading Styles */
+
+h1 {
+	background-image:url('/sites/all/themes/npeace/images/h1-background.png');
+	background-repeat:no-repeat;
+	height:65px;
+	width:853px;
+	font-size:16pt;
+	padding-bottom:0px;
+	padding-top:10px;
+	padding-left:50px;
+	color:#000000;
+	position:relative;
+	left:-53px;
+}
+
+h2 {
+	color:#8D5A9E;
+	font-size:14pt;
+	margin-bottom:0px;
+}
+
+h3 {
+	color:#6B5C7F;
+	font-size:12pt;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+/* Body Text Styles */
+
+p {
+	text-align:justify;
+	margin-top:0px;
+	margin-bottom:10px;
+}
+
+p.emphasized {
+	color:#EF6D33;
+	font-weight:bold;
+}
+
+/* Links Styles */
+
+a {
+	color:#EF6D33;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a:hover {
+	text-decoration:underline;
+}

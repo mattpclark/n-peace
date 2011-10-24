@@ -64,7 +64,6 @@ function reg_with_pic_form_user_register_form_alter(&$form, &$form_state, $form_
  * Implements hook_user_insert().
  */
 function reg_with_pic_user_insert(&$edit, $account, $category) {
-	dsm($account);
   // Set picture if it exists.
   if (!empty($account->picture)) {
     $picture = $account->picture;

@@ -16,3 +16,5 @@
 [19-Oct-2011 17:32:01] PHP Fatal error:  Out of memory (allocated 65536000) (tried to allocate 72 bytes) in /home/npeace/public_html/beta/sites/all/modules/views/includes/base.inc on line 77
 [23-Oct-2011 16:27:00] PHP Fatal error:  Call to undefined function dsm() in /home/npeace/public_html/beta/sites/all/modules/reg_with_pic/reg_with_pic.module on line 67
 [23-Oct-2011 16:33:54] PHP Fatal error:  Call to undefined function dsm() in /home/npeace/public_html/beta/sites/all/modules/reg_with_pic/reg_with_pic.module on line 67
+[24-Oct-2011 12:54:31] PHP Fatal error:  Call to undefined function dsm() in /home/npeace/public_html/beta/sites/all/modules/reg_with_pic/reg_with_pic.module on line 67
+[24-Oct-2011 13:28:31] PHP Parse error:  syntax error, unexpected ':', expecting '{' in /home/npeace/public_html/beta/sites/all/modules/reg_with_pic/reg_with_pic.module on line 66

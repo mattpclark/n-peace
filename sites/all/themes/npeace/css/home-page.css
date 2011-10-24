@@ -1,0 +1,31 @@
+/* Use a different background color above the fold, but only on the home page */
+.page-home #above-the-fold {
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+/* Revert back to the normal colour below the fold on the home page */
+.page-home .region-footer {
+	background-color:#E5E1EE;
+}
+
+/* Fix position of n-peace award banner on the home page */
+#n-peace-banner {
+
+}
+
+.page-home #panel-npeace-banner p {
+	margin:0px;
+}
+
+/* Hide H1 headings on the home page */
+.page-home h1 {
+	display:none;
+}
+
+/* Draw a line above the bottom panel, but only on the home page */
+.page-home .panel-col-middle {
+
+}
+

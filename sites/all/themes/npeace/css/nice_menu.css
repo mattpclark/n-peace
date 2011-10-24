@@ -1,0 +1,126 @@
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+#main-menu .block {
+	margin-bottom:0px;
+}
+
+#main-menu {
+	position:relative;
+}
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  margin-top: 10px;
+  padding-left:0px;
+  margin-left:0px;
+}
+
+ul.nice-menu li {
+  display:inline;
+  margin-right:50px;
+}
+
+ul.nice-menu a {
+  display:inline;
+}
+
+ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px; /* LTR */
+  margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  
+}
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+}
+
+ul.nice-menu-down li {
+	display:inline;
+}
+
+ul.nice-menu-down li li {
+}
+
+ul.nice-menu-down ul {
+	width:150px;
+	background-color:#C3B6D4;
+	border-top:1px solid #8D5B9F;
+	border-bottom:1px solid #8D5B9F;
+	top:15px;
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+  padding-top:10px;
+  padding-left:10px;
+  width:150px;
+}
+
+ul.nice-menu-down li ul li ul {
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  
+}
+
+ul.nice-menu-down li.menuparent {
+  background-image:url(/sites/all/modules/nice_menus/arrow-down.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li.menuparent:hover {
+  background-image:url(arrow-down.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent {
+  background-image:url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background-image:url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+/**
+ * HORIZONTAL (down) menus
+ */
+#header-region ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+#header-region ul.nice-menu-down li.menuparent {
+  background: #eee url(arrow-down.png) right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li.menuparent:hover {
+  background: #ccc url(arrow-down.png) right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent {
+  background: #eee url(arrow-right.png) right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent:hover {
+  background: #ccc url(arrow-right.png) right center no-repeat; /* LTR */
+}

@@ -98,12 +98,7 @@
 				<img src="/sites/all/themes/npeace/images/home-page-splash.png" alt="The N-Peace Network" />
 			</div> <!-- /.front-page-splash -->
 			<div id="quote">
-<<<<<<< HEAD
 			<a href="/awards"><img src="/sites/all/themes/npeace/images/awards-splash.png" alt="N-Peace Awards"/></a>
-=======
-			<p>For it isn't enough to talk about peace. One must believe in it. And it isn't enough to believe in it. One must work at it.</p>
-			<p><em>~ Eleanor Roosevelt</em></p>
->>>>>>> origin/n-peace
 			</div>
 			<div id="highlight1"><?php print render($page['highlight1']); ?></div> <!-- /.highlight1 -->
 			<div class="clearfix"></div>

@@ -1,0 +1,125 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active {
+  color:#F6921E;
+}
+
+/*
+ * Navigation bar
+ */
+#navigation {
+  /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
+}
+
+#navigation h2 {
+	display:none;
+}
+
+#navigation ul.links, /* Main menu and secondary menu links */
+#navigation .content ul /* Menu block links */ {
+  margin: 0;
+  padding: 0;
+  text-align: left; /* LTR */
+}
+
+#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
+#navigation .content li {
+  float: left; /* LTR */
+  padding: 0 0px 0 0; /* LTR */
+}
+
+.region-navigation {
+}
+
+/*
+ * Main menu and Secondary menu links
+ */
+#main-menu {
+
+}
+
+#main-menu ul li {
+	
+}
+
+#main-menu.links li:after {
+	content:url(/sites/all/themes/npeace/images/bullet.png);
+}
+
+#main-menu.links li.last:after {
+	content:' ';
+}
+
+#secondary-menu {
+  float: right;
+}
+
+/*
+ * Menu blocks
+ */
+.block-menu {
+}
+
+/*
+ * "Menu block" blocks
+ *
+ * Drupal core has limited ways in which it can display its menus. To get around
+ * these limitations, see http://drupal.org/project/menu_block
+ */
+.block-menu-block {
+}
+
+/* Menu Block */
+#navigation ul.menu {
+	margin: 0;
+	padding: 0;
+	text-align: left; /* LTR */
+	position:relative;
+}
+
+#navigation ul.menu li, /* A simple method to get navigation links to appear in one line. */
+#navigation .content li {
+  float: left; /* LTR */
+  padding: 0 0px 0 0; /* LTR */
+  margin-right:0px;
+  list-style:none;
+}
+
+#navigation ul.menu li:after {
+	content:url(/sites/all/themes/npeace/images/bullet.png);
+}
+
+#navigation ul.menu li.last:after {
+	content:none;
+}
+
+#navigation ul.menu li.expanded {
+	
+}
+
+#navigation ul.menu li ul.menu {
+	position:absolute;
+	left:50px;
+}
+
+#navigation ul.menu li ul.menu li {
+	float:left;
+	margin:15px 10px 0 0;
+	border:1px solid #ccc;
+	padding:0 3px 0 3px;
+}
+
+#navigation ul.menu li ul.menu li:hover {
+	border:1px solid #666;
+}
+
+#navigation ul.menu li ul.menu li:after {
+	content:none;
+}

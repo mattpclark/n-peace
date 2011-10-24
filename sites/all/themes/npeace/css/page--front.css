@@ -1,0 +1,79 @@
+body {}
+
+div {
+}
+
+#page-wrapper-front,
+.region-bottom {
+  /*
+   * If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. See also the ie6.css file
+   * for the necessary IE5/IE6quirks hack to center a div.
+   */
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
+}
+
+body.front #page {
+	padding:25px;
+	background-image:url('/sites/all/themes/npeace/images/background/world-map.jpg');
+	background-repeat:no-repeat;
+}
+
+#left-hand-side {
+	width:766px;
+	padding-right:22px;
+	float:left;
+	border-right:1px solid #cbcbcb;
+}
+
+body.front #header {
+}
+
+body.front #content {
+	
+}
+
+body.front #content #highlight1 {
+	width:370px;
+	padding-left:396px;
+}
+
+body.front #content #highlight2 {
+	width:370px;
+	float:left;
+	padding-right:13px;
+}
+
+body.front #content #highlight3 {
+	width:370px;
+	float:left;
+	padding-left:13px;
+}
+
+#right-hand-side {
+	width:158px;
+	padding-left:22px;
+	float:left;
+}
+
+#footer {
+	height:100px;
+}
+
+#supporters {
+	background-image:url('/sites/all/themes/npeace/images/background/supporters.png');
+	height:136px;
+}
+
+#quote {
+	position:absolute;
+	top:550px;
+	width:300px;
+}
+
+#quote p {
+	font-size:18pt;
+	color:#cbcbcb;
+}

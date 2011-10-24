@@ -1,0 +1,18 @@
+[19-Oct-2011 10:48:30] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/home/npeace/public_html/beta/sites/all/modules/calendar/includes/calendar_plugin_display_page.inc' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/npeace/public_html/beta/includes/bootstrap.inc on line 2913
+[19-Oct-2011 17:30:39] PHP Fatal error:  Out of memory (allocated 65273856) (tried to allocate 72 bytes) in /home/npeace/public_html/beta/includes/cache.inc on line 405
+[19-Oct-2011 17:30:40] PHP Fatal error:  Out of memory (allocated 66322432) (tried to allocate 11 bytes) in /home/npeace/public_html/beta/includes/database/database.inc on line 2166
+[19-Oct-2011 17:30:41] PHP Fatal error:  Out of memory (allocated 66060288) (tried to allocate 30720 bytes) in /home/npeace/public_html/beta/sites/all/modules/views/theme/views-view.tpl.php on line 69
+[19-Oct-2011 17:31:29] PHP Fatal error:  Out of memory (allocated 55836672) (tried to allocate 98 bytes) in /home/npeace/public_html/beta/includes/theme.inc on line 980
+[19-Oct-2011 17:31:29] PHP Fatal error:  Out of memory (allocated 55574528) (tried to allocate 122880 bytes) in /home/npeace/public_html/beta/sites/all/modules/panels/plugins/layouts/flexible/flexible.inc on line 232
+[19-Oct-2011 17:31:42] PHP Fatal error:  Out of memory (allocated 47185920) (tried to allocate 122880 bytes) in /home/npeace/public_html/beta/sites/all/modules/views/includes/admin.inc on line 194
+[19-Oct-2011 17:31:42] PHP Fatal error:  Out of memory (allocated 31457280) (tried to allocate 77 bytes) in /home/npeace/public_html/beta/includes/cache.inc on line 405
+[19-Oct-2011 17:31:42] PHP Fatal error:  Out of memory (allocated 63176704) (tried to allocate 72 bytes) in /home/npeace/public_html/beta/sites/all/modules/views/includes/base.inc on line 84
+[19-Oct-2011 17:31:42] PHP Fatal error:  Out of memory (allocated 52690944) (tried to allocate 64 bytes) in /home/npeace/public_html/beta/includes/database/query.inc on line 1848
+[19-Oct-2011 17:31:42] PHP Fatal error:  Out of memory (allocated 32243712) (tried to allocate 30720 bytes) in /home/npeace/public_html/beta/includes/locale.inc on line 398
+[19-Oct-2011 17:31:47] PHP Fatal error:  Out of memory (allocated 63176704) (tried to allocate 72 bytes) in /home/npeace/public_html/beta/sites/all/modules/views/includes/base.inc on line 84
+[19-Oct-2011 17:31:58] PHP Fatal error:  Out of memory (allocated 66584576) (tried to allocate 169 bytes) in /home/npeace/public_html/beta/includes/cache.inc on line 405
+[19-Oct-2011 17:31:59] PHP Fatal error:  Out of memory (allocated 65273856) (tried to allocate 64 bytes) in /home/npeace/public_html/beta/sites/all/modules/views/includes/base.inc on line 75
+[19-Oct-2011 17:31:59] PHP Fatal error:  Out of memory (allocated 63176704) (tried to allocate 78 bytes) in /home/npeace/public_html/beta/includes/cache.inc on line 405
+[19-Oct-2011 17:32:01] PHP Fatal error:  Out of memory (allocated 65536000) (tried to allocate 72 bytes) in /home/npeace/public_html/beta/sites/all/modules/views/includes/base.inc on line 77
+[23-Oct-2011 16:27:00] PHP Fatal error:  Call to undefined function dsm() in /home/npeace/public_html/beta/sites/all/modules/reg_with_pic/reg_with_pic.module on line 67
+[23-Oct-2011 16:33:54] PHP Fatal error:  Call to undefined function dsm() in /home/npeace/public_html/beta/sites/all/modules/reg_with_pic/reg_with_pic.module on line 67

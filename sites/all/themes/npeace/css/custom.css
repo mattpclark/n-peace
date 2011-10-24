@@ -1,0 +1,38 @@
+/* Custom Styles */
+
+#block-menu-menu-engage {
+	border:1px solid #8071B4;
+}
+
+#block-menu-menu-engage .content {
+	display:none;
+}
+
+#block-menu-menu-engage h2 {
+	font-size:12pt;
+	padding:5px 0px 5px 10px;
+	background-color:#C1ACCF;
+	background-image:url('/sites/all/themes/npeace/images/arrow_down.png');
+	background-repeat:no-repeat;
+	background-position:right;
+	margin:0px;
+}
+
+#block-menu-menu-engage ul {
+	padding-left:20px;
+}
+
+#block-menu-menu-engage ul li {
+	list-style-image:url('/sites/all/themes/npeace/images/arrow_right.png');;
+	margin-bottom:10px;
+}
+
+/* Site Map (Footer) */
+#footer table {
+	width:100%;
+	color:#8071B4;
+}
+
+#footer table td {
+	width:25%;
+}

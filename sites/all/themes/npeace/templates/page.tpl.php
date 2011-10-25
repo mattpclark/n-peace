@@ -93,6 +93,9 @@
 		    <?php endif; ?>
 	      </div><!-- /#navigation -->
 		<div id="content-area">
+			<?php if ($node->type != 'page'): ?>
+				<h1><?php print $title; ?></h1>
+			<?php endif; ?>
 			<?php if ($tabs = render($tabs)): ?>
 		        <div class="tabs"><?php print $tabs; ?></div>
 		      <?php endif; ?>

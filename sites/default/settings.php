@@ -182,11 +182,11 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'npeace_beta',
-      'username' => 'npeace_admin',
-      'password' => 'np3AceAPRC',
+      'database' => 'npeace_drupal',
+      'username' => 'root',
+      'password' => 'root',
       'host' => 'localhost',
-      'port' => '3306',
+      'port' => '8889',
       'driver' => 'mysql',
       'prefix' => '',
     ),
@@ -245,7 +245,7 @@ $drupal_hash_salt = 'v3UItnHl0Vxyui45NYcojEYacwNynNQxWj8Cg0YDqps';
  * It is not allowed to have a trailing slash; Drupal will add it
  * for you.
  */
-$base_url = 'http://beta.n-peace.net';  // NO trailing slash!
+$base_url = 'http://n-peace.local:8888';  // NO trailing slash!
 
 /**
  * PHP settings:

@@ -63,7 +63,7 @@ DirectoryIndex index.php index.html index.htm
   # above.
   #
   # NOTE: This only works when mod_rewrite is loaded. Without mod_rewrite, it is
-  # not possible to block access to entire directories from .htaccess because
+  # not possible to block access to entire directories from .htaccess, because
   # <DirectoryMatch> is not allowed here.
   #
   # If you do not have mod_rewrite installed, you should remove these
@@ -99,7 +99,6 @@ DirectoryIndex index.php index.html index.htm
 
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
-
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico

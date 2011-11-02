@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Member Profile feature.
- */
-
-include_once('member_profile.features.inc');

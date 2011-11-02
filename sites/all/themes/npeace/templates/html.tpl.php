@@ -68,30 +68,6 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <script>
-	(function ($) {
-		$('document').ready(function() {
-			var $expanded = false;
-			$('#block-menu-menu-engage').click(function() {
-				if ($expanded == false) {
-					$('#block-menu-menu-engage .content').slideDown ('slow', function() {
-						$('#block-menu-menu-engage h2').css("background-image", "url('/sites/all/themes/npeace/images/arrow_up.png')");
-						$('#block-menu-menu-engage h2').css("background-repeat", "no-repeat");
-						$('#block-menu-menu-engage h2').css("background-position", "right");
-						$expanded = true;
-					});
-				} else {
-					$('#block-menu-menu-engage .content').slideUp ('slow', function() {
-						$('#block-menu-menu-engage h2').css("background-image", "url('/sites/all/themes/npeace/images/arrow_down.png')");
-						$('#block-menu-menu-engage h2').css("background-repeat", "no-repeat");
-						$('#block-menu-menu-engage h2').css("background-position", "right");
-						$expanded = false;
-					});
-				}
-			});
-		});
-	}(jQuery));
-	</script>
 	<script>
 	(function ($) {
 		$('document').ready(function() {

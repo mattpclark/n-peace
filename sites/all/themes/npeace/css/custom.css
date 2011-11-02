@@ -5,7 +5,7 @@
 }
 
 #block-menu-menu-engage .content {
-	display:none;
+	display:block;
 }
 
 #block-menu-menu-engage h2 {
@@ -35,4 +35,34 @@
 
 #footer table td {
 	width:25%;
+}
+
+/* Country pages */
+.node-type-country-page .panel-col-first {
+	background-color:#8071B4;
+	background:rgba(128,113,180,0.3);
+	padding:10px;
+	with:30%;
+}
+
+.node-type-country-page .panel-col-first .inside {
+	position:relative;
+}
+
+.node-type-country-page .panel-col-last {
+	padding:10px;
+	width:60%;
+}
+
+.node-type-country-page .pane-node-create-links ul {
+	padding-left:0px;
+}
+
+.node-type-country-page .pane-node-create-links ul li {
+	list-style:none;
+	border:1px solid #8071B4;
+	padding:10px;
+	background:rgba(128,113,180,0.3);
+	margin-bottom:5px;
+	text-align:center;
 }

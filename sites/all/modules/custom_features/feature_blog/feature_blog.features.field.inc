@@ -122,7 +122,7 @@ function feature_blog_field_default_fields() {
       'bundle' => 'blog',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Please enter some keywords to help group your story with other similar stories.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -141,16 +141,19 @@ function feature_blog_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_keywords',
       'label' => 'Keywords',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '2',
+        'active' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '3',
       ),
     ),
   );
@@ -171,7 +174,9 @@ function feature_blog_field_default_fields() {
       ),
       'module' => 'og',
       'no_ui' => TRUE,
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'group',
     ),
@@ -198,7 +203,7 @@ function feature_blog_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'group_audience',
       'label' => 'Groups audience',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -215,12 +220,13 @@ function feature_blog_field_default_fields() {
         ),
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'og',
         'settings' => array(
-          'opt_group' => 'auto',
+          'opt_group' => 'always',
         ),
         'type' => 'group_audience',
-        'weight' => '4',
+        'weight' => '2',
       ),
       'widget_type' => 'group_audience',
     ),
@@ -231,6 +237,7 @@ function feature_blog_field_default_fields() {
   t('Body');
   t('Groups audience');
   t('Keywords');
+  t('Please enter some keywords to help group your story with other similar stories.');
 
   return $fields;
 }

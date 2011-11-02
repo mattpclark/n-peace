@@ -175,11 +175,22 @@ function feature_blog_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'blog';
   $page->task = 'page';
-  $page->admin_title = 'Blog';
+  $page->admin_title = 'stories';
   $page->admin_description = '';
-  $page->path = 'blog';
+  $page->path = 'stories';
   $page->access = array();
-  $page->menu = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Stories',
+    'name' => 'main-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array();
   $page->conf = array(
     'admin_paths' => FALSE,
@@ -207,7 +218,7 @@ function feature_blog_default_page_manager_pages() {
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'blog',
+            'paths' => 'stories',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -233,7 +244,7 @@ function feature_blog_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'blogs-news_stream_teasers';
+    $pane->subtype = 'blogs-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -247,7 +258,7 @@ function feature_blog_default_page_manager_pages() {
     $display->content['new-1'] = $pane;
     $display->panels['middle'][0] = 'new-1';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['blog'] = $page;

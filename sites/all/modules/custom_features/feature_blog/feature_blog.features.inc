@@ -34,12 +34,12 @@ function feature_blog_views_api() {
 function feature_blog_node_info() {
   $items = array(
     'blog' => array(
-      'name' => t('Blog'),
+      'name' => t('Story'),
       'base' => 'node_content',
       'description' => t('Write your own online journal and share it with the community.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
+      'title_label' => t('Story Title'),
+      'help' => t('Please write a short title (five words or less) for your story.'),
     ),
   );
   return $items;

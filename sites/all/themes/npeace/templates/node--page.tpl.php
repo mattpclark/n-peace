@@ -100,17 +100,11 @@
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
-  <div id="node-content-left">
 	<div class="photo-container">
 		<?php print render($content['field_photo']); ?><img src="/sites/all/themes/npeace/images/mask_320x300.png" class="mask" />
 	</div>
-  </div> <!-- /.content-left -->
-  <div id="node-content-right">
-  	<div class="node-highlight">
-		<?php print $content['body']['#object']->body['en']['0']['safe_summary']; ?>
-	</div>
-	<h1><?php print render($content['body']['#object']->title); ?></h1>
-  <div class="content"<?php print $content_attributes; ?>
+  <div id="content-right">
+  <div class="content"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);

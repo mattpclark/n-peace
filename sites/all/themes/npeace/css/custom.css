@@ -66,3 +66,34 @@
 	margin-bottom:5px;
 	text-align:center;
 }
+
+.node-type-country-page .view-display-id-og_country_story .views-row {
+	width:49%;
+	float:left;
+}
+
+.node-type-country-page .view-display-id-og_country_story .views-row {
+	width:47%;
+	float:left;
+}
+
+.node-type-country-page .view-display-id-og_country_story .views-row.views-row-odd {
+	padding-right:10px;
+	margin-right:10px;
+	border-right:#CBCBCB 1px solid;
+}
+
+.node-type-country-page .view-display-id-og_country_story .views-field-picture {
+	width:50%;
+	float:left;
+	margin-top:10px;
+}
+
+.node-type-country-page #country-stories {
+	border-top:1px #cbcbcb solid;
+	padding-top:10px;
+}
+
+.node-type-country-page .panel-separator {
+	clear:both;
+}

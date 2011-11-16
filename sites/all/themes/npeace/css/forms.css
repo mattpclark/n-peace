@@ -151,3 +151,7 @@ form table .item-list ul {
     width: 25px;
 	float:left;
 }
+
+.form-textarea {
+	opacity:0.7;
+}

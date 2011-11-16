@@ -69,6 +69,7 @@
  */
 ?>
 <div id="page-wrapper">
+<?php print $messages; ?>
 <div id="page">
 	<div id="left-hand-side">
 		<div id="header">
@@ -77,7 +78,7 @@
 	      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
 	    <?php endif; ?>
 	    </div> <!-- /.section -->
-	    <?php print $messages; ?>
+	    
 		</div> <!-- /.header -->
 		<div id="navigation">
 
@@ -93,9 +94,9 @@
 		    <?php endif; ?>
 	      </div><!-- /#navigation -->
 		<div id="content-area">
-			<?php if ($node->type != 'page'): ?>
+			<?php if (isset($node)) { ?>
 				<h1><?php print $title; ?></h1>
-			<?php endif; ?>
+			<?php } ?>
 			<?php if ($tabs = render($tabs)): ?>
 		        <div class="tabs"><?php print $tabs; ?></div>
 		      <?php endif; ?>

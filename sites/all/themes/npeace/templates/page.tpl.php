@@ -70,6 +70,9 @@
 ?>
 <div id="page-wrapper">
 <?php print $messages; ?>
+<?php if ($tabs = render($tabs)): ?>
+    <div class="tabs"><?php print $tabs; ?></div>
+  <?php endif; ?>
 <div id="page">
 	<div id="left-hand-side">
 		<div id="header">
@@ -97,9 +100,6 @@
 			<?php if (isset($node)) { ?>
 				<h1><?php print $title; ?></h1>
 			<?php } ?>
-			<?php if ($tabs = render($tabs)): ?>
-		        <div class="tabs"><?php print $tabs; ?></div>
-		      <?php endif; ?>
 		<?php print render($page['content']); ?>
 		</div> <!-- /.content-area -->
 	</div> <!-- /.left-hand-side -->

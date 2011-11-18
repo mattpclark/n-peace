@@ -70,6 +70,24 @@
 ?>
 <div id="page-wrapper">
 <div id="page">
+	<div id="map-navigation-widget">
+		<div id="indonesia" class="map-marker">
+	    	<img src="sites/all/themes/npeace/images/home-page/map/point.png" id="indonesia-point" class="map-point" />
+	    	<div class="map-label" id="indonesia-label"><a href="/indonesia"><img src="sites/all/themes/npeace/images/home-page/map/indonesia.png" /></a></div>
+		</div>
+		<div id="nepal" class="map-marker">
+		    	<img src="sites/all/themes/npeace/images/home-page/map/point.png" id="nepal-point" class="map-point" />
+		    	<div class="map-label" id="nepal-label"><a href="/nepal"><img src="sites/all/themes/npeace/images/home-page/map/nepal.png" /></a></div>
+		</div>
+		<div id="srilanka" class="map-marker">
+	    	<img src="sites/all/themes/npeace/images/home-page/map/point.png" id="srilanka-point" class="map-point" />
+	    	<div class="map-label" id="srilanka-label"><a href="/sri-lanka"><img src="sites/all/themes/npeace/images/home-page/map/srilanka.png" /></a></div>
+		</div>
+		<div id="timor-leste" class="map-marker">
+	    	<img src="sites/all/themes/npeace/images/home-page/map/point.png" id="timor-leste-point" class="map-point" />
+	    	<div class="map-label" id="timor-leste-label"><a href="/timor-leste"><img src="sites/all/themes/npeace/images/home-page/map/timor-leste.png" /></a></div>
+		</div>
+	</div>
 	<div id="left-hand-side">
 		<div id="header">
 		<div class="section clearfix">

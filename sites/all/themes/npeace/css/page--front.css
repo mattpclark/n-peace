@@ -77,3 +77,47 @@ body.front #content #highlight3 {
 	font-size:18pt;
 	color:#cbcbcb;
 }
+
+/* Map Widget */
+#map-navigation-widget {
+	position:absolute;
+	top:400px;
+	left:500px;
+	height:200px;
+	width:200px;
+}
+
+#map-navigation-widget #nepal {
+	top:50px;
+	left:35px;
+}
+
+#map-navigation-widget #indonesia {
+	top:100px;
+	left:80px;
+}
+
+#map-navigation-widget #srilanka {
+	top:80px;
+	left:40px;
+}
+
+#map-navigation-widget #timor-leste {
+	top:115px;
+	left:105px;
+}
+
+#map-navigation-widget .map-marker {
+	position:absolute;
+}
+
+#map-navigation-widget .map-marker .map-label {
+	position:absolute;
+	top:0px;
+	display:none;
+}
+
+#map-navigation-widget .map-marker .map-point {
+	position:absolute;
+	top:0px;
+}
